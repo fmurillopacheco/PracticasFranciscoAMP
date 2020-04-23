@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
     @WebInitParam(name = "param2", value = "Soy"),
     @WebInitParam(name = "param3", value = "Groot")})
 public class Parametros extends HttpServlet {
-
+// NO HAS IMPLEMENTADO EL MÉTODO init QUE ES DONDE SE COJEN LOS PARÁMENTROS INICIALES
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.

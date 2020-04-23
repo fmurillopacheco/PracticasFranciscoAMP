@@ -33,9 +33,10 @@ public class Fecha extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        // NO UTILIZAS ESTILOS
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+            // NO LE HAS DADO FORMATO A LA FECHA día de la semana, día del mes de nombre del mes de año
             java.util.Date fecha = new Date();
             
             out.println("<!DOCTYPE html>");

@@ -5,7 +5,7 @@
  */
 package es.albarregas.controllers;
 
-
+// QUITA LAS IMPORTACIONES QUE NO UTILICES
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+// ERROR 405 POR QUÉ NO HAS IMPLEMENTADO EL MÉTODO doGet
 /**
  *
  * @author Francisco_Antonio

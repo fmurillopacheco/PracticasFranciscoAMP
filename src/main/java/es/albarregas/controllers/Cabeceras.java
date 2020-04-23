@@ -35,7 +35,7 @@ public class Cabeceras extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+            // NO HAS PUESTO EL NOMBRE DE LAS CABECERAS EN CASTELLANO
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");

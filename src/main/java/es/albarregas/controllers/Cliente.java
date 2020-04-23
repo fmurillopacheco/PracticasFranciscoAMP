@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Francisco_Antonio
  */
+// PARA QUÉ TIENES PARÁMETROS INICIALES EN ESTE SERVLET?
 @WebServlet(name = "Cliente", urlPatterns = {"/Cliente"}, initParams = {
     @WebInitParam(name = "p1", value = "Paco"),
     @WebInitParam(name = "p2", value = "Murillo")})
