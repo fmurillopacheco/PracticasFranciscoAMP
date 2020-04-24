@@ -19,9 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Francisco_Antonio
  */
 // PARA QUÉ TIENES PARÁMETROS INICIALES EN ESTE SERVLET?
-@WebServlet(name = "Cliente", urlPatterns = {"/Cliente"}, initParams = {
-    @WebInitParam(name = "p1", value = "Paco"),
-    @WebInitParam(name = "p2", value = "Murillo")})
+@WebServlet(name = "Cliente", urlPatterns = {"/Cliente"})
 public class Cliente extends HttpServlet {
 
     /**
@@ -41,17 +39,18 @@ public class Cliente extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Cliente</title>");            
+            out.println("<title>Servlet Cliente</title>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/estilo.css\">");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Cliente at " + request.getContextPath() + "</h1>");
 
-            out.println("<h1>Metodo: " + request.getMethod() + "</h1>");
-            out.println("<h1>Informacion del Path: " + request.getPathInfo() + "</h1>");
-            out.println("<h1>Usuario remoto: " + request.getRemoteUser() + "</h1>");
-            out.println("<h1>Nombre del servidor: " + request.getServerName() + "</h1>");
-            out.println("<h1>Protocolo: " + request.getProtocol() + "</h1>");
-            out.println("<h1>Dirección remota: " + request.getRemoteAddr() + "</h1>");
+            out.println("<p><strong>Metodo: </strong>" + request.getMethod() + "</p>");
+            out.println("<p><strong>Informacion del Path: </strong>" + request.getPathInfo() + "</p>");
+            out.println("<p><strong>Usuario remoto: </strong>" + request.getRemoteUser() + "</p>");
+            out.println("<p><strong>Nombre del servidor: </strong>" + request.getServerName() + "</p>");
+            out.println("<p><strong>Protocolo: </strong>" + request.getProtocol() + "</p>");
+            out.println("<p><strong>Dirección remota: </strong>" + request.getRemoteAddr() + "</p>");
 
 
             out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");

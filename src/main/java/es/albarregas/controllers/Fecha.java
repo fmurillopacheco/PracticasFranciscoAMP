@@ -7,6 +7,8 @@ package es.albarregas.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,15 +39,24 @@ public class Fecha extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             // NO LE HAS DADO FORMATO A LA FECHA día de la semana, día del mes de nombre del mes de año
-            java.util.Date fecha = new Date();
+
+            //Obtenemos la fecha y hora actual del sistema.
+            Date fecha = new Date();
+            // Se asigna formato de fecha, (Día de la semana, día-mes-año, hora:minutos:segundos en formato 24h.)
+            String strDateFormat = "EEEEE dd-MMMM-YYYY HH: MM: ss ";
+            // La cadena de formato de fecha se pasa como un argumento.
+            SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
+
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Fecha</title>");            
+            out.println("<title>Servlet Fecha</title>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/estilo.css\">");            
             out.println("</head>");
             out.println("<body>");
-            out.println("Hoy es "+"<strong>"+ fecha +"</strong>"+", y estoy programando y puteado de Curentena.");
+            out.println("<h1> Servlet Fecha. "+ request.getContextPath() + "</h1>");
+            out.println("Hoy es "+"<strong>"+ objSDF.format(fecha) +"</strong>"+" y estoy programando, puteado y en Curentena.");
             
             out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
             out.println("</body>");

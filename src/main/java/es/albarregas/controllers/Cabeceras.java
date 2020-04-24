@@ -39,27 +39,31 @@ public class Cabeceras extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Cabeceras</title>");            
+            out.println("<title>Servlet Cabecera</title>"); 
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/estilo.css\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Cabeceras</h1>");
+            out.println("<h1>Servlet Cabecera at " + request.getContextPath() + "</h1>");
+            out.println("<p><strong>" + request.getHeaderNames() + "</strong></p>");
+            out.println("</body>");
+            out.println("</html>");
            
             Enumeration<String> headerNames = request.getHeaderNames();
             while (headerNames.hasMoreElements()) {
                 String headerName = headerNames.nextElement();
                 out.write(headerName);
-                out.write("<br>");
+                out.write(":<br>");
 
-            Enumeration<String> headers = request.getHeaders(headerName);
-            while (headers.hasMoreElements()) {
-               String headerValue = headers.nextElement();
-                out.write("\t" + headerValue);
-                out.write("<br>");
-                out.write("<br>");
-              }
-        }
+                Enumeration<String> headers = request.getHeaders(headerName);
+                while (headers.hasMoreElements()) {
+                    String headerValue = headers.nextElement();
+                        out.write("\t" + headerValue);
+                        out.write("<br>");
+                        out.write("<br>");
+                }
+            }
         
-        out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
+            out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
             out.println("</body>");
             out.println("</html>");
         }
