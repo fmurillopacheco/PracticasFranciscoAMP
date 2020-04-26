@@ -8,6 +8,7 @@ package es.albarregas.controllers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.annotation.WebInitParam;
@@ -60,8 +61,13 @@ public class Parametros extends HttpServlet {
             out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
             out.println("</body>");
             out.println("</html>");
+
+
         }
     }
+
+
+
 
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Datos de la reserva.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/estiloFormComplejo.css">
+    </head>
+    <body>
+        <div id="Titulo">Hotel Transilvania.</div>
+        <div id="container">
+            <p id="Titulo1">Reservas: </p>
+        <form action="/FormComplejo" method="post">
+            <label></label><input name="nombre" type="text" placeholder="Nombre: " required=""><br><br>
+            <label> </label><input name="apellidos" type="text" placeholder="Apellidos:" required=""><br><br>
+            <label></label><input name="telefono" type="number" placeholder="N&uacute;mero de Tel&eacute;fono:" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required><br><br>
+            <label> </label><input name="email" type="email" placeholder="Correo Electr&oacute;nico: " required=""><br><br><br>
+                <label>N&uacute;mero de noches: </label>
+                    <select id="noches" name="noches">
+                        <option value="1">1 noche</option>
+                        <option value="2">2 noches</option>
+                        <option value="3">3 noches</option>
+                        <option value="4">4 noches</option>
+                        <option value="5">5 noches</option>
+                        <option value="6">6 noches</option>
+                        <option value="7">7 noches</option>
+                    </select>
+                <br><br>
+                <label>Fecha de entrada: </label>
+                    <select id="entrada" name="entrada">
+                        <option value="26/04">26/04</option>
+                        <option value="27/04">27/04</option>
+                        <option value="28/04">28/04</option>
+                        <option value="29/04">29/04</option>
+                        <option value="30/04">30/04</option>
+                        <option value="01/05">01/05</option>
+                        <option value="02/05">02/05</option>
+                    </select>
+                <label>Fecha de Salida: </label>
+                    <select id="salida" name="salida">
+                        <option value="27/04">27/04</option>
+                        <option value="28/04">28/04</option>
+                        <option value="29/04">29/04</option>
+                        <option value="30/04">30/04</option>
+                        <option value="01/05">01/05</option>
+                        <option value="02/05">02/05</option>
+                        <option value="03/05">03/05</option>
+                    </select>
+                <br><br>
+                <label class="radio">Tipo de Habitaci&oacute;n: <br><input type="radio" name="tipoHabit" value="simple" checked> Habitaci&oacute;n Simple.</label><br>
+                <label class="radio"><input type="radio" name="tipoHabit" value="doble"> Habitaci&oacute;n Doble.</label><br>
+                <label class="radio"><input type="radio" name="tipoHabit" value="matrimonio"> Habitaci&oacute;n Matrimonio.</label>
+                <br><br>
+                <label>Extras: <br><input type="checkbox" name="extras" value="desayuno"> Desayuno. </label>
+                <label> <input type="checkbox" name="extras" value="comida"> Comida. </label>
+                <label> <input type="checkbox" name="extras" value="cena"> Cena. </label>
+                <label> <input type="checkbox" name="extras" value="cama"> Cama Supletoria. </label>
+                <br><br>
+                <label>Comentarios:<br/><textarea name="areaTexto" rows="4" cols="50">Pon tu comentario...</textarea><br/></label>
+
+                <button type="submit" name="enviar" value="Enviar">Enviar</button>
+                <button type="reset" name="limpiar" value="Limpiar">Limpiar</button>
+            </form>
+        </div>
+    </body>
+</html>
