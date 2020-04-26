@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-abr-2020, 14:22:35
+    Author     : Francisco_Antonio
+*/
+
+body
+{
+   font-family: 'PT Sans', sans-serif;
+   font-size: 16px;
+   padding:2px;
+   cursor:pointer;
+   display:block;
+   margin-top: 20px;
+   text-align:center;
+}
+#Titulo {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: solid blue;
+}
+#Titulo1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+#container{
+       margin-top: 50px;
+}
