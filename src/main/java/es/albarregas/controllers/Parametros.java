@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
     @WebInitParam(name = "param2", value = "Soy"),
     @WebInitParam(name = "param3", value = "Groot")})
 public class Parametros extends HttpServlet {
-// NO HAS IMPLEMENTADO EL MÉTODO init QUE ES DONDE SE COJEN LOS PARÁMENTROS INICIALES
+// NO HAS IMPLEMENTADO EL MÉTODO init QUE ES DONDE SE COGEN LOS PARÁMENTROS INICIALES
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -39,23 +39,23 @@ public class Parametros extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-      
+
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Par&aacute;metros</title>");            
+            out.println("<title>Servlet Par&aacute;metros</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1> Servlet Par&aacute;metros. </h1>");
-            
+
             out.println("Parametro 1: "+request.getParameter("param1")+"<br>");
             out.println("Parametro 2: "+request.getParameter("param2")+"<br>");
             out.println("Parametro 3: "+request.getParameter("param3"));
             out.println("<br>");
             out.println("<br>");
             out.println("<a href=\"http://localhost:8084/PracticasFranciscoAMP/Parametros?param1=Yo&param2=Soy&param3=Goot\">Mandar parametros</a>");
-            
+
 
             out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
             out.println("</body>");
