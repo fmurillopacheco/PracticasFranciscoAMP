@@ -25,23 +25,7 @@ import javax.servlet.http.HttpServletResponse;
     @WebInitParam(name = "param2", value = "Soy"),
     @WebInitParam(name = "param3", value = "Groot")})
 public class Parametros extends HttpServlet {
-// NO HAS IMPLEMENTADO EL MÉTODO init QUE ES DONDE SE COJEN LOS PARÁMENTROS INICIALES
-        public Parametros() {
-            super();
-        }
-
-        public void init(ServletConfig config, HttpServletResponse response) throws ServletException, IOException {
-          super.init();
-            PrintWriter out = response.getWriter();
-            out.println("<p>Parametro 1: " + config.getInitParameter("param1") + "</p>");
-            out.println("<p>Parametro 2: " + config.getInitParameter("param2") + "</p>");
-            out.println("<p>Parametro 3: " + config.getInitParameter("param3") + "</p>");
-        
-            System.out.println("Parametro 1: " + config.getInitParameter("param1"));
-            System.out.println("Parametro 2: " + config.getInitParameter("param2"));
-            System.out.println("Parametro 3: " + config.getInitParameter("param3"));
-        }
-    
+// NO HAS IMPLEMENTADO EL MÉTODO init QUE ES DONDE SE COGEN LOS PARÁMENTROS INICIALES
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -56,34 +40,35 @@ public class Parametros extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Par&aacute;metros</title>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/estilo.css\">");             
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1> Servlet Par&aacute;metros. "+ request.getContextPath() + "</h1>");
-            out.println("<p>P&aacute;rametro 1: " + getInitParameter("param1") + "</p>");
-            out.println("<p>P&aacute;rametro 2: " + getInitParameter("param2") + "</p>");
-            out.println("<p>P&aacute;rametro 3: " + getInitParameter("param3") + "</p>");
+            out.println("<h1> Servlet Par&aacute;metros. </h1>");
+
+            out.println("Parametro 1: "+request.getParameter("param1")+"<br>");
+            out.println("Parametro 2: "+request.getParameter("param2")+"<br>");
+            out.println("Parametro 3: "+request.getParameter("param3"));
             out.println("<br>");
             out.println("<br>");
             out.println("<a href=\"http://localhost:8084/PracticasFranciscoAMP/Parametros?param1=Yo&param2=Soy&param3=Goot\">Mandar parametros</a>");
-            
+
 
             out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
             out.println("</body>");
             out.println("</html>");
-            
-            
+
+
         }
     }
 
-    
 
-    
+
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
