@@ -15,21 +15,13 @@ and open the template in the editor.
         <div id="Titulo">Hotel Transilvania.</div>
         <div id="container">
             <p id="Titulo1">Reservas: </p>
-        <form action="/FormComplejo" method="post">
-            <label></label><input name="nombre" type="text" placeholder="Nombre: " required=""><br><br>
-            <label> </label><input name="apellidos" type="text" placeholder="Apellidos:" required=""><br><br>
-            <label></label><input name="telefono" type="number" placeholder="N&uacute;mero de Tel&eacute;fono:" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required><br><br>
-            <label> </label><input name="email" type="email" placeholder="Correo Electr&oacute;nico: " required=""><br><br><br>
-                <label>N&uacute;mero de noches: </label>
-                    <select id="noches" name="noches">
-                        <option value="1">1 noche</option>
-                        <option value="2">2 noches</option>
-                        <option value="3">3 noches</option>
-                        <option value="4">4 noches</option>
-                        <option value="5">5 noches</option>
-                        <option value="6">6 noches</option>
-                        <option value="7">7 noches</option>
-                    </select>
+        <form action="../FormComplejo" method="post">
+            <label></label><input name="nombre" type="text" pattern="[A-Za-z]{2,25}" placeholder="Nombre: "><br><br>
+            <label> </label><input name="apellidos" type="text" pattern="[a-zA-Z]{2,50}" placeholder="Apellidos: "><br><br>
+            <label></label><input name="telefono" type="tel" placeholder="N&uacute;mero de Tel&eacute;fono:" pattern="[6|7|9][0-9]{8}"><br><br>
+            <label> </label><input name="email" type="email" placeholder="Correo Electr&oacute;nico: "><br><br><br>
+            <label>N&uacute;mero de noches: </label><input name="noches" type="number" min="1" max="30">
+
                 <br><br>
                 <label>Fecha de entrada: </label>
                     <select id="entrada" name="entrada">
@@ -63,7 +55,7 @@ and open the template in the editor.
                 <br><br>
                 <label>Comentarios:<br/><textarea name="areaTexto" rows="4" cols="50">Pon tu comentario...</textarea><br/></label>
 
-                <button type="submit" name="enviar" value="Enviar">Enviar</button>
+                <button type="submit" name="env" value="Enviar">Enviar</button>
                 <button type="reset" name="limpiar" value="Limpiar">Limpiar</button>
             </form>
         </div>

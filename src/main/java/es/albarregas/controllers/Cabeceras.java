@@ -47,7 +47,7 @@ public class Cabeceras extends HttpServlet {
             out.println("<p><strong>" + request.getHeaderNames() + "</strong></p>");
             out.println("</body>");
             out.println("</html>");
-           
+ /*          
             Enumeration<String> headerNames = request.getHeaderNames();
             while (headerNames.hasMoreElements()) {
                 String headerName = headerNames.nextElement();
@@ -61,8 +61,16 @@ public class Cabeceras extends HttpServlet {
                         out.write("<br>");
                         out.write("<br>");
                 }
-            }
-        
+            }*/
+        Enumeration cabeceras = request.getHeaderNames();
+
+	while (cabeceras.hasMoreElements())
+	{		
+		String nombre = (String)(cabeceras.nextElement());
+		out.println ("<strong>Nombre Cabecera: </strong>" + nombre + 
+		   "<br> <strong>Valor: </strong>" + request.getHeader(nombre));
+		out.println ("<BR><BR>");
+	}
             out.println("<p align=\"center\"><a href=\"index.html\">Menú Principal</a></p>");
             out.println("</body>");
             out.println("</html>");

@@ -42,8 +42,8 @@ public class Fecha extends HttpServlet {
 
             //Obtenemos la fecha y hora actual del sistema.
             Date fecha = new Date();
-            // Se asigna formato de fecha, (Día de la semana, día-mes-año, hora:minutos:segundos en formato 24h.)
-            String strDateFormat = "EEEEE dd-MMMM-YYYY HH: MM: ss ";
+            // Se asigna formato de fecha, (Día de la semana (en letras), número de mes 'de' mes (en letras) 'de' año .)
+            String strDateFormat = "EEEEE, M 'de' MMMM 'de' YYYY";
             // La cadena de formato de fecha se pasa como un argumento.
             SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
 
