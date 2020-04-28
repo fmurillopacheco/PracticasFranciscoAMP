@@ -16,11 +16,14 @@ and open the template in the editor.
         <div id="container">
             <p id="Titulo1">Reservas: </p>
         <form action="/FormComplejo" method="post">
+            <!-- LOS CAMPOS OBLIGATORIOS SE COMPRUEBAN EN EL SERVIDOR -->
             <label></label><input name="nombre" type="text" placeholder="Nombre: " required=""><br><br>
             <label> </label><input name="apellidos" type="text" placeholder="Apellidos:" required=""><br><br>
+            <!-- NA VALIDAS CORRECTAMENTE EL TELÉFONO -->
             <label></label><input name="telefono" type="number" placeholder="N&uacute;mero de Tel&eacute;fono:" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required><br><br>
             <label> </label><input name="email" type="email" placeholder="Correo Electr&oacute;nico: " required=""><br><br><br>
                 <label>N&uacute;mero de noches: </label>
+                <!-- EL NÚMERO DE NOCHES ES UNA CAJA DE TEXTO -->
                     <select id="noches" name="noches">
                         <option value="1">1 noche</option>
                         <option value="2">2 noches</option>
@@ -31,6 +34,7 @@ and open the template in the editor.
                         <option value="7">7 noches</option>
                     </select>
                 <br><br>
+                <!-- EL ENUNCIADO NO HABLA NADA DE FECHA DE ENTRADA Y DE SALIDA -->
                 <label>Fecha de entrada: </label>
                     <select id="entrada" name="entrada">
                         <option value="26/04">26/04</option>
