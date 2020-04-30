@@ -45,16 +45,39 @@ Se comprueba y se despliega perfectamente.
 Consta de las siguientes aplicaciones o ejercicios:
 
 Los siguientes ejercicios se añaden al proyecto PracticasFranciscoAMP en la carpeta "JSP" y las páginas html en la carpeta "html" 
+### 1. Calcula el último dígito de un factorial.
+*Realizar una página mediante páginas JSP una aplicación que introduzca un numero entero y calcule el último dígito de su factorial,      por ejemplo, se introduce 4 y se tiene que visualizar 4 ya que el factorial de 4 es 24. El número se introduce en un fichero HTML y      se interpreta en un JSP.*
 
-1. Realizar una página mediante páginas JSP una aplicación que introduzca un numero entero y calcule el último dígito de su factorial,      por ejemplo, se introduce 4 y se tiene que visualizar 4 ya que el factorial de 4 es 24. El número se introduce en un fichero HTML y      se interpreta en un JSP.
+Tarea pendiente de realizar.
 
-Tarea sin realizar.
+### 2. Calculadora de conversión entre divisas.
+*Realizar una página mediante JSP que sea una calculadora de conversión entre divisas. Podremos realizara la conversión entre euros,      dolares, yenes y libras esterlinas en ambos sentidos, es decir por ejemplo, de euros a dolares y de dolares a euros. En un documento    HTML introduciremos la cantidad y en que moneda está y a la que lo queremos pasar. En una página JSP se interpretará lo que se ha        enviado y se mostrará el resultado.*
 
-2. Realizar una página mediante JSP que sea una calculadora de conversión entre divisas. Podremos realizara la conversión entre euros,      dolares, yenes y libras esterlinas en ambos sentidos, es decir por ejemplo, de euros a dolares y de dolares a euros. En un documento    HTML introduciremos la cantidad y en que moneda está y a la que lo queremos pasar. En una página JSP se interpretará lo que se ha        enviado y se mostrará el resultado.
+Tarea pendiente de realizar.
 
-Tarea sin realizar.
+### 3. Desglose euros en billetes y monedas.
+*Realizar una página JSP que desglose una cantidad de euros en forma ideal en billetes y monedas. La cantidad se introduce en un HTML    y se interpreta y visualiza en un JSP.*
 
-3. Realizar una página JSP que desglose una cantidad de euros en forma ideal en billetes y monedas. La cantidad se introduce en un HTML    y se interpreta y visualiza en un JSP.
+Tarea pendiente de realizar.
 
-Tarea sin realizar.
+### 4. Gestión de Cookies.
+*Realizar una aplicación para la gestión de cookies. Esta aplicación constará de una página JSP con dos textField, uno para introducir el nombre de la cookie y otro para el valor, si fuese necesario. Además dispondrá de un conjunto de botones para realizar las acciones: crear una nueva, visualizar el contenido de una existente, modificar el valor de una existente, eliminar una ya existente y vuelta al menú principal. Por cada una de las operaciones se mostrará un mensaje informativo de lo que ha ocurrido.*
+
+Se realiza aplicación para la gestión de cookies con dos archivos. Uno *menucookies.jsp* en el que se muestra el menú para realizar todas las operaciones solicitadas: crear una nueva, visualizar el contenido de una existente, modificar el valor de una existente, eliminar una ya existente y un botón "*Menú*" que dirige al Menú principal. Y otro *gestionCookies.jsp* en el que se realizan todas las operaciones necesarias para que la aplicación funciones.
+
+### 5. Gestión de Sesiones.
+*Realizar una aplicación para la gestión de sesiones. Esta aplicación constará de una página JSP con cuatro textField, uno para introducir el nombre de la sesión y los otros tres para el valor, si fuese necesario. El valor de la sesión será: nombre, fecha de nacimiento y sueldo en euros. Además dispondrá de un conjunto de botones para realizar las acciones: crear una nueva, visualizar el contenido de una existente, modificar el valor de una existente, eliminar una ya existente y vuelta al menú principal. Por cada una de las operaciones se mostrará un mensaje informativo de lo que ha ocurrido.*
+
+Se realiza aplicación para la gestión de sesiones en un archivo denominado gestionSesion.jsp. Solo crea la sesión. No está terminado.
+
+### 6. Contador de cookies.
+*Realizar una aplicación para contar el número de visitas a la página mediante cookies. Esta aplicación constará de un Servlet donde se visualizará la siguiente información cuando la cookie que controla el contador no exista: caducidad y nombre de la cookie y por supuesto el número de veces que se ha visitado la página, que en este caso será 1. Para las demás veces aparecerá solamente el número de veces que se ha visitado la página. También existirán unos botones con las opciones: recargar la página, resetear la cookie y volver al menú principal.*
+
+Se realiza aplicación en un archivo denominado contadorVisitasCookies.jsp. en el que se muestras las veces en las que se visualiza las veces que se ha visitado y con la opción de eliminar la cookie y recargarla. Mostrando además el nombre de la cookie que se crea, el tipo y la versión.
+
+### 7. Contador de visitas Sesiones.
+*Realizar una aplicación para contar el número de visitas a la página mediante sesiones. Esta aplicación constará de un Servlet donde se visualizará la siguiente información cuando la sesión que controla el contador no exista: id, nombre y fecha de creación de la sesión y por supuesto el número de veces que se ha visitado la página, que en este caso será 1. Para las demás veces aparecerá solamente el número de veces que se ha visitado la página. También existirán unos botones con las opciones: recargar la página, resetear la sesión y volver al menú principal.*
+
+Se realiza la aplicación en un archivo denominado contadorVisitasSesiones.jsp, en el que se visualiza las veces que visitas la sesion. Esta aplicación no tiene estilos y está pendiente de terminar.
+
 
