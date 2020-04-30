@@ -1,0 +1,94 @@
+<%-- 
+    Document   : contadorVisitasCookies
+    Created on : 30-abr-2020, 0:26:50
+    Author     : Framcisco_Antonio
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Contador de Vistas Cookies</title>
+        <link rel="stylesheet" href="../CSS/cookiesCss.css">
+        <script>
+            function myFunction() {
+                location.reload();
+            }
+        </script>
+    </head>
+    <body>
+<%
+            int contadorVisitas = 0;
+            Cookie miCookie = null;
+            Cookie[] cookies = request.getCookies();
+            //comprobar el array de cookies para ver si está vacio.
+            if (cookies != null) {
+                for (int i = 0; i < cookies.length; i++) {
+                    if (cookies[i].getName().equals("LaCookieCreada")) {
+                        miCookie = cookies[i];
+                        break;
+                    }
+                }
+            }
+            
+            String mensajeVisitas = "Has visitado la p&aacute;gina. " ;
+            if (miCookie == null) {
+                miCookie = new Cookie("LaCookieCreada", "1");
+                //Se establece una hora, la caducidad de la cookie.
+                miCookie.setMaxAge(60 * 60);
+                //Se añade la cookie.
+                response.addCookie(miCookie);
+                //Se establece la versión del protocolo. Si es 0 cumple con el standar Netscape.
+                miCookie.setVersion(0);
+                //false --> se envia en cualquier protocolo HTTPS o SSL.
+                miCookie.setSecure(false);
+                mensajeVisitas += ""+miCookie.getValue();
+            } else {
+                if (request.getParameter("boton") != null) {
+                    if (request.getParameter("boton").equals("Recargar")) {
+                        contadorVisitas = Integer.parseInt(miCookie.getValue());
+                        contadorVisitas++;
+                        miCookie.setValue(contadorVisitas + "");
+                        response.addCookie(miCookie);
+                        mensajeVisitas += ""+miCookie.getValue();
+                    } else if (request.getParameter("boton").equals("Eliminar")) {
+                        miCookie.setMaxAge(0);
+                        response.addCookie(miCookie);
+                        mensajeVisitas = "Se ha eliminado la cookie";
+                        contadorVisitas = 0;
+                    }
+                }
+            }
+        %>
+        <h1>CONTADOR DE VISITAS COOKIES</h1>
+        <form action="contadorVisitasCookies.jsp" method="post">
+            <fieldset>
+                <%=mensajeVisitas%>
+                <%
+                    if (miCookie != null) {
+                        if (miCookie.getValue().equals("1")) {
+                                %> VEZ<%
+                        } else {
+                                %> VECES<%
+                          }
+                      }
+                %>
+                <br>
+                <br>
+                <br>
+                Nombre: <%=miCookie.getName()%><br>
+                Segura: <%=miCookie.getSecure()%><br>
+                Versión: <%=miCookie.getVersion()%>
+                <br>
+
+                <button type="submit" name="boton" value="Recargar"><a id="menuCookies" onclick="myFunction()">Recargar</a> </button>
+                <button type="submit" name="boton" value="Eliminar">Eliminar</button>
+                <button type="submit" name="boton" value="Menu"><a id="menuCookies" href="<%=request.getContextPath()%>/index.html">Menú</a> </button>
+                <br>
+                <br>
+            </fieldset>
+
+        </form>
+    </body>
+</html>
