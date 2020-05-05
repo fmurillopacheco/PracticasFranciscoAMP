@@ -80,4 +80,18 @@ Se realiza aplicación en un archivo denominado contadorVisitasCookies.jsp. en e
 
 Se realiza la aplicación en un archivo denominado contadorVisitasSesiones.jsp, en el que se visualiza las veces que visitas la sesion. Esta aplicación no tiene estilos y está pendiente de terminar.
 
+### 8. Página de registro.
+*"Realizar una aplicación web siguiendo el MVC. Los campos que empiezan por asterisco son obligatorios. La fecha hay que validarla en el servidor.*
+
+*Cuando introducimos la información y algún dato no es correcto aparecerá el formulario anterior con los datos introducidos y un aviso con los errores cometidos. Ahora bien, la comunicación de los errores se realizará mediante iconos al lado de cada campo erróneo. El icono de error será una "X" en rojo y el de acierto un check en verde.*
+
+*Cuando todos los datos se introduzcan correctamente aparecerá una pantalla visualizando los datos obtenidos."*
+Se crea en el index.html, dentro del apartado JavaScript Pages el acceso a registro.jsp denominandolo "Página de Registo".
+
+![Página de Registro](img/formularioRegistro.png)
+
+- Se crea archivo registro.jsp que es un formularios el que se pide varios datos.
+- Se crea el servlet registro.java en el que se realizan y muestran los datos que se rellenan en el archivo jsp.
+- Se queda pendiente la validación de los datos del formalario.
+- Se modifica el archivbo estiloFormComplejo.css con los estilos que se aplicarán en el apartado  de registro.
 
