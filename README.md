@@ -88,7 +88,7 @@ Se realiza la aplicación en un archivo denominado contadorVisitasSesiones.jsp, 
 *Cuando todos los datos se introduzcan correctamente aparecerá una pantalla visualizando los datos obtenidos."*
 Se crea en el index.html, dentro del apartado JavaScript Pages el acceso a registro.jsp denominandolo "Página de Registo".
 
-![Página de Registro](img/formularioRegistro.png)
+![](https://github.com/fmurillopacheco/PracticasFranciscoAMP/blob/master/src/main/webapp/img/formularioRegistro.png)
 
 - Se crea archivo registro.jsp que es un formularios el que se pide varios datos.
 - Se crea el servlet registro.java en el que se realizan y muestran los datos que se rellenan en el archivo jsp.
