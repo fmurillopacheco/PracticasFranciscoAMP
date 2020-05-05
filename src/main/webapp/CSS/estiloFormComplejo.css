@@ -12,11 +12,11 @@ body
 {
    font-family: 'PT Sans', sans-serif;
    font-size: 16px;
-   padding:2px;
-   cursor:pointer;
+   padding:10px;
    display:block;
    margin-top: 20px;
    text-align:center;
+
 }
 #Titulo {
     font-family: 'PT Sans', sans-serif;
@@ -31,4 +31,11 @@ body
 }
 #container{
        margin-top: 50px;
+}
+
+#preferecias,#Acceso,#personal{
+/*    display:block;
+    width: inherit;*/
+    border: none;/*
+    text-justify: auto;*/
 }

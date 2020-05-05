@@ -95,5 +95,27 @@
             response.sendRedirect("menuCookies.jsp?mensaje=" + mensaje);
         %>
 
+        
+        <div>
+            <h1>GESTI&Oacute;N DE COOKIES.</h1>
+            <form action="gestionCookies.jsp" method="post">
+
+                <fieldset>
+                    <label></label><input  name="nombre" type="text" placeholder="Nombre de la cookie:" required><br><br>
+                    <label></label><input  name="valor" type="text" placeholder="Valor de la cookie:"><br>
+                    <br>
+                    <br>
+                    <button type="submit" name="botonCookie" value="Crear">Crear</button>
+                    <button type="submit" name="botonCookie" value="Visualizar">Visualizar</button>
+                    <button type="submit" name="botonCookie" value="Modificar">Modificar</button>
+                    <button type="submit" name="botonCookie" value="Eliminar">Eliminar</button>
+                    <button type="submit" name="botonCookie" value="Menu"><a id="menuCookies" href="<%=request.getContextPath()%>/index.html">Menú</a> </button>
+                    <br>
+                    <br>
+
+                </fieldset>
+            </form>
+            <p><%=mensaje%></p>
+        </div>
     </body>
 </html>
